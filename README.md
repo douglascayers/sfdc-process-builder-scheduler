@@ -8,8 +8,8 @@ Inspired by **Marie Chandra's** idea [Ability to schedule when process builder t
 Installation
 ------------
 You can easily install these components to your org as an unmanaged package.
-* [Production URL](https://login.salesforce.com/packaging/installPackage.apexp?p0=)
-* [Sandbox URL](https://test.salesforce.com/packaging/installPackage.apexp?p0=)
+* [Production URL](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tj0000001ejTg)
+* [Sandbox URL](https://test.salesforce.com/packaging/installPackage.apexp?p0=04tj0000001ejTg)
 
 Usage
 -----
