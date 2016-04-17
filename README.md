@@ -22,7 +22,7 @@ Just note that the object and record context the scheduled process runs under is
 
 Cron Expressions
 ----------------
-In this early version, processes are scheduled by specifying a cron expression. In future releases (see issue #1) I hope to provide a more natural UI for choosing the minute/hour/day/etc. for the schedule.
+In this early version, processes are scheduled by specifying a cron expression. In future releases, I hope to provide a more natural UI for choosing the minute/hour/day/etc. for the schedule.
 In the meantime, please see the [Apex Scheduler](https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_scheduler.htm) docs for proper syntax.
 
 | Expression | Description |
