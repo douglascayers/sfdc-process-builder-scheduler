@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>ProcessBuilderRescheduleInvocable</members>
+        <members>ProcessBuilderScheduleAbortInvocable</members>
+        <members>ProcessBuilderScheduleInvocable</members>
+        <members>ProcessBuilderScheduleJob</members>
+        <members>ProcessBuilderScheduleJobTest</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>Process_Builder_Schedule__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Process_Builder_Schedule__c</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>Auto_Post_to_Chatter-1</members>
+        <members>Process_Builder_Scheduler-5</members>
+        <name>Flow</name>
+    </types>
+    <types>
+        <members>Auto_Post_to_Chatter</members>
+        <members>Process_Builder_Scheduler</members>
+        <name>FlowDefinition</name>
+    </types>
+    <types>
+        <members>Process_Builder_Schedule__c-Process Builder Schedule Layout</members>
+        <name>Layout</name>
+    </types>
+    <version>36.0</version>
+</Package>

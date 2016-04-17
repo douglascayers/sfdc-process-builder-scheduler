@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Inspired by idea &quot;Ability to Schedule When Process Builder Triggers&quot; by Marie Chandra https://success.salesforce.com/ideaView?id=08730000000DjEmAAK</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>When true then process will be scheduled. When inactive then scheduled job will be aborted at its next run time.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When checked then process will be scheduled. If unchecked, or if this record is deleted, then at next scheduled run the job will be aborted.</inlineHelpText>
+        <label>Active</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Cron_Expression__c</fullName>
+        <description>How often the job should be scheduled to run. See https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_scheduler.htm for help with creating cron expression.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>How often the job should be scheduled to run. See https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_scheduler.htm for help with creating cron expression.</inlineHelpText>
+        <label>Cron Expression</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <description>Why do you need this process scheduled? Your future self will thank you for filling this in =)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Why do you need this process scheduled? Your future self will thank you for filling this in =)</inlineHelpText>
+        <label>Description</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Job_Name__c</fullName>
+        <description>Computed name for the scheduled job. This will be the name of the CronJobDetail record that represents the schedule.</description>
+        <externalId>false</externalId>
+        <formula>Process_API_Name__c &amp; &apos;_&apos; &amp; Id</formula>
+        <inlineHelpText>Computed name for the scheduled job. This will be the name of the CronJobDetail record that represents the schedule.</inlineHelpText>
+        <label>Job Name</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Process_API_Name__c</fullName>
+        <description>The unique name of your Process Builder to schedule.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The unique name of your Process Builder to schedule.</inlineHelpText>
+        <label>Process API Name</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Times_Triggered__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>How many times has the scheduled process been triggered?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>How many times has the scheduled process been triggered?</inlineHelpText>
+        <label>Times Triggered</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Process Builder Schedule</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Process_API_Name__c</columns>
+        <columns>Active__c</columns>
+        <columns>Description__c</columns>
+        <columns>Cron_Expression__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>{000000}</displayFormat>
+        <label>Schedule Number</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Process Builder Schedules</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Process_API_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Active__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Description__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Cron_Expression__c</customTabListAdditionalFields>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <lookupDialogsAdditionalFields>Process_API_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Active__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Description__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Cron_Expression__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Process_API_Name__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Active__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Description__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Cron_Expression__c</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>Process_API_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Active__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Description__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Cron_Expression__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>
