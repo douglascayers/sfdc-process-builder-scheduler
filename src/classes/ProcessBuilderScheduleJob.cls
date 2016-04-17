@@ -1,4 +1,10 @@
 /**
+ * Inspired by Marie Chandra's idea, "Ability to schedule when process builder triggers"
+ * https://success.salesforce.com/ideaView?id=08730000000DjEmAAK
+ * 
+ * Developed by Doug Ayers
+ * https://github.com/DouglasCAyers/sfdc-process-builder-scheduler
+ * 
  * Purpose is to periodically update the Process Builder Schedule record
  * associated with this job instance. The update simply increments the times
  * triggered counter for no other reason than to cause Process Builder to
