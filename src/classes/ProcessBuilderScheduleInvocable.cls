@@ -30,7 +30,7 @@ public class ProcessBuilderScheduleInvocable {
             
             Set<String> cronJobNames = new Set<String>();
             for ( CronTrigger cronTrigger : [
-				SELECT
+               	SELECT
                 	id, state, cronJobDetail.name
                	FROM
                 	CronTrigger
