@@ -22,7 +22,7 @@ public class ProcessBuilderScheduleAbortInvocable {
             }
             
             for ( List<CronTrigger> cronTriggers : [
-				SELECT
+               	SELECT
                 	id, state, cronJobDetail.name
                	FROM
                 	CronTrigger
