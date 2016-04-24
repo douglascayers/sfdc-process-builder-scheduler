@@ -7,7 +7,8 @@ Inspired by **Marie Chandra's** idea [Ability to schedule when process builder t
 
 Installation
 ------------
-You can easily install these components to your org as an unmanaged package.
+You can easily install these components to your org straight from github or as an unmanaged package.
+* [Deploy from Github](https://githubsfdeploy.herokuapp.com)
 * [Production URL](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tj0000001ejTg)
 * [Sandbox URL](https://test.salesforce.com/packaging/installPackage.apexp?p0=04tj0000001ejTg)
 
