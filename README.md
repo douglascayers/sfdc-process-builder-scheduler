@@ -1,3 +1,12 @@
+New Tool Available (January 2018)
+---------------------------------
+
+I've developed a new, more robust tool, [Mass Action Scheduler](https://github.com/DouglasCAyers/sfdx-mass-action-scheduler), that lets you declaratively schedule Process Builder, Flows, Quick Actions, Email Alerts, Workflow Rules, and Apex to process records from Reports and List Views.
+
+Check out the [examples](https://github.com/DouglasCAyers/sfdx-mass-action-scheduler/wiki/Example:-Add-Contacts-to-Campaign-via-Report-and-Process-Builder) to see how.
+
+---
+
 Process Builder Scheduler
 =========================
 
